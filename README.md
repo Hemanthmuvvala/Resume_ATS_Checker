@@ -61,10 +61,6 @@ pip install -r requirements.txt
 pip install flask google-genai PyPDF2 python-dotenv
 ```
 
-Bash
-
-pip install flask google-genai PyPDF2 python-dotenv
-
 4. Configure secrets (recommended for local development):
 
 - Create a file named `.env` in the project root.
