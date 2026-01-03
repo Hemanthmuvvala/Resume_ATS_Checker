@@ -4,11 +4,21 @@
 from flask import Flask, request, jsonify, render_template
 from google import genai
 import PyPDF2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-# Initialize Gemini Client
-client = genai.Client(api_key="AIzaSyAIJa5JtD8_salkTAmQszIKOiEKSySkq2w")
+# Fetch the key securely
+# If the key isn't found, this will return None and avoid crashing immediately
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise ValueError("No API key found. Please set GEMINI_API_KEY in your .env file")
+
+client = genai.Client(api_key=api_key)
 
 @app.route('/')
 def index():
