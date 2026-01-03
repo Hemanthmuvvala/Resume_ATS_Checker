@@ -61,6 +61,10 @@ pip install -r requirements.txt
 pip install flask google-genai PyPDF2 python-dotenv
 ```
 
+Bash
+
+pip install flask google-genai PyPDF2 python-dotenv
+
 4. Configure secrets (recommended for local development):
 
 - Create a file named `.env` in the project root.
@@ -110,7 +114,7 @@ ai-resume-scanner/
 🐛 Troubleshooting
 Error: 404 models/gemini-2.5-flash not found
 
-Fix: Ensure `main.py` is using the specific model version `gemini-1.5-flash-001`.
+Fix: Ensure `main.py` is using the specific model version `gemini-2.5-flash`.
 
 Error: Module not found
 
